@@ -1,0 +1,29 @@
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR='nvim'
+export CHROME_BIN="/snap/bin/chromium"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions direnv)
+
+source $ZSH/oh-my-zsh.sh
+
+alias zshconfig="$EDITOR ~/.zshrc"
+alias nvimconfig="$EDITOR ~/.config/nvim"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+
+# PATH
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.nvim/bin
+export PATH=$PATH:$HOME/.chezmoi
+
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
+
+# GHCup
+[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 
+
+# Nix
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
+
+
