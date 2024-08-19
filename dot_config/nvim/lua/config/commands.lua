@@ -5,7 +5,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.keymap.set('i', 'kj', '<ESC>')
-vim.keymap.set('n', '<leader>nt', function () require('nvim-tree.api').tree.toggle() end, {})
+vim.keymap.set('n', '<leader>e', function () vim.cmd (":Explore") end, {})
+vim.keymap.set('n', '<leader>es', function () vim.cmd (":Sexplore") end, {})
+vim.keymap.set('n', '<leader>ev', function () vim.cmd (":Vexplore") end, {})
 
 vim.cmd([[cabbrev help tab help]])
 vim.cmd([[
