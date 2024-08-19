@@ -27,3 +27,15 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+local group = vim.api.nvim_create_augroup("Markdown Wrap Settings", { clear = true })
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = {'*.md'},
+  group = group,
+  command = 'setlocal wrap'
+})
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = {'*.md'},
+  group = group,
+  command = 'set linebreak'
+})
