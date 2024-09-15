@@ -11,8 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 # PATH
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.nvim/bin
-export PATH=$PATH:$HOME/.chezmoi
+export PATH=$PATH:$HOME/AppImages
 
 alias che="chezmoi edit ; chezmoi apply ; chezmoi update"
 
