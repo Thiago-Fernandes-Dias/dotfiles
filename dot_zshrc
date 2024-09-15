@@ -16,13 +16,14 @@ export PATH=$PATH:$HOME/.chezmoi
 
 alias che="chezmoi edit ; chezmoi apply ; chezmoi update"
 
-# mise
-eval "$(~/.local/bin/mise activate zsh)"
+# ASDF
+. "$HOME/.asdf/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
 
 # GHCup
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 
 
 # Nix
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
-
 
