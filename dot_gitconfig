@@ -1,3 +1,8 @@
 [user]
 	name = Thiago Fernandes Dias
 	email = thiago.fernandesdias235@gmail.com
+[init]
+    defaultBranch = main
+[core]
+    editor = code
+    autocrlf = input
