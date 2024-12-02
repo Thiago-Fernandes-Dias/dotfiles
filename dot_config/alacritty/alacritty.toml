@@ -1,0 +1,9 @@
+[shell]
+program = "/bin/zsh"
+
+[window]
+startup_mode = "Maximized"
+dynamic_title = false
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
