@@ -5,7 +5,9 @@ export TERM=xterm-256color
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions direnv)
+plugins=(
+    git zsh-syntax-highlighting zsh-autosuggestions direnv asdf git chezmoi 
+    fzf gh docker mvn node pip python debian)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -26,3 +28,6 @@ autoload -Uz compinit && compinit
 
 # Nix
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

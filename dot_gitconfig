@@ -3,3 +3,8 @@
 	email = thiago.fernandesdias235@gmail.com
 [pull]
     rebase = false
+[init]
+    defaultBranch = main
+[core]
+    editor = code
+    autocrlf = input
