@@ -23,7 +23,6 @@ export PATH="$HOME/.jbang/bin:$PATH"
 . "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
-. ~/.asdf/plugins/java/set-java-home.zsh
 
 # GHCup
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 
