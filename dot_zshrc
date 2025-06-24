@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
     git zsh-syntax-highlighting zsh-autosuggestions asdf git chezmoi 
-    fzf gh docker mvn node pip python debian completion)
+    fzf gh docker mvn node pip python debian)
 
 # PATH
 export PATH=$PATH:$HOME/.local/bin
