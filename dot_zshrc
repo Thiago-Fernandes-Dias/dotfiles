@@ -16,11 +16,7 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/appimages
 export PATH=$PATH:$HOME/AppImages
 export PATH=$PATH:$HOME/.atuin/bin
-
-# ASDF
-. "$HOME/.asdf/asdf.sh"
-fpath=(${ASDF_DIR}/completions $fpath)
-autoload -Uz compinit && compinit
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # GHCup
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 
