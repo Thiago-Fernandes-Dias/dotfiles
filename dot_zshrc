@@ -4,6 +4,7 @@ export CHROME_BIN="/snap/bin/chromium"
 export TERM=xterm-256color
 export GITHUB_USER="Thiago-Fernandes-Dias"
 export OPENCODE_EXPERIMENTAL_LSP_TOOL=true
+export OPENCODE_ENABLE_EXA=1
 
 ZSH_THEME="robbyrussell"
 
