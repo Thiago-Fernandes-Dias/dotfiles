@@ -20,6 +20,7 @@ export PATH=$PATH:$HOME/.local/appimages
 export PATH=$PATH:$HOME/AppImages
 export PATH=$PATH:$HOME/.atuin/bin
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH=/home/thiago/.opencode/bin:$PATH
 
 # GHCup
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" 
@@ -32,3 +33,4 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 
 # Docker X11 forwarding
 xhost +local:docker > /dev/null
+
