@@ -18,6 +18,7 @@ export PATH=$PATH:$HOME/.atuin/bin
 export PATH=$PATH:$HOME/.flutter/bin
 export PATH="$HOME/.jbang/bin:$PATH"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
+export PATH=$PATH:$HOME/.opencode/bin/
 
 # ASDF completions
 fpath=(${ASDF_DATA_DIR}/completions $fpath)
