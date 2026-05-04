@@ -1,6 +1,6 @@
 [user]
-	name = Thiago Fernandes Dias
-	email = thiago.fernandesdias235@gmail.com
+	name = Thiago F. Dias
+	email = t.dias@mshimizu.com.br
 [pull]
     rebase = false
 [init]
@@ -8,3 +8,8 @@
 [core]
     editor = code
     autocrlf = input
+[protocol "file"]
+	allow = always
+[submodule]
+	recurse = true
+
