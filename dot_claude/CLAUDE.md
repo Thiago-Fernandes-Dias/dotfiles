@@ -28,6 +28,36 @@ You are limited to read-only git commands, unless I specifically instruct you ot
 
 # MCPs
 
+## Atlassian (Jira, Confluence, Bitbucket, Compass, JSM)
+
+Use the Atlassian MCP server to interact with Atlassian Cloud products whenever the user asks you to work with Jira issues, Confluence pages, Bitbucket repositories, Compass components, or Jira Service Management — whether reading, searching, creating, or updating. Prefer this over asking the user to manually look things up or copy-paste content.
+
+Do not use for: writing code unrelated to Atlassian products, refactoring, debugging business logic, or general programming tasks. Do not use when the user is merely mentioning an issue key or page title in passing without asking you to act on it.
+
+### Authentication
+
+The server uses the user's existing Atlassian permissions. All actions respect the user's access controls. Tools are grouped by product and function (read, write, search). Organization admins control which tool groups are available.
+
+### When to use which tools
+
+- **Jira issue search/read**: when the user asks about an issue, wants to find issues matching criteria, or needs issue details. Use `searchJiraIssuesUsingJql` for searches and individual issue getters for known keys.
+- **Jira issue creation/update**: when the user asks you to create or modify tickets. Use `createJiraIssue` to create; use `getJiraProjectIssueTypesMetadata` first to know available issue types, and `getVisibleJiraProjects` if the project key is unknown.
+- **Jira bulk operations**: when the user needs to create many related issues at once (e.g., from a spec or meeting notes).
+- **Confluence search/read**: when the user asks about documentation, needs to find a page, or wants to reference existing docs. Use `searchConfluenceUsingCql` for search and `getConfluencePage` to fetch page content.
+- **Confluence page creation**: when the user asks you to create or update documentation pages.
+- **Cross-product search**: when the user asks a broad question like "what do we know about X?" — search across Jira and Confluence simultaneously.
+- **Bitbucket**: for repository, PR, and code operations.
+- **Compass**: for service catalog and component dependency queries.
+- **Jira Service Management**: for service desk operations.
+
+### Steps
+
+1. Identify which product(s) the user's request involves (Jira, Confluence, Bitbucket, Compass, JSM).
+2. Identify the operation type: read, search, or write.
+3. If the user is vague about the project, space, or repository, use the appropriate "get visible" or "search" tool to narrow down before acting.
+4. For search queries, use JQL (Jira), CQL (Confluence), or the cross-product search tool. Write specific, targeted queries — avoid overly broad searches.
+5. Before creating issues or pages, confirm the target project/space and key details with the user if they are ambiguous.
+
 ## Context7
 
 Use Context7 MCP to fetch current documentation whenever the user asks about a library, framework, SDK, API, CLI tool, or cloud service — even well-known ones like React, Next.js, Prisma, Express, Tailwind, Django, or Spring Boot. This includes API syntax, configuration, version migration, library-specific debugging, setup instructions, and CLI tool usage. Use even when you think you know the answer — your training data may not reflect recent changes. Prefer this over web search for library docs.
