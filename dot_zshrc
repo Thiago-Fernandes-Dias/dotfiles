@@ -12,10 +12,9 @@ plugins=(
 
 # PATH
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.local/appimages
+export PATH=$PATH:$HOME/.local/nvim/bin
 export PATH=$PATH:$HOME/AppImages
 export PATH=$PATH:$HOME/.atuin/bin
-export PATH=$PATH:$HOME/.flutter/bin
 export PATH="$HOME/.jbang/bin:$PATH"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export PATH=$PATH:$HOME/.opencode/bin/
