@@ -1,6 +1,6 @@
 [user]
 	name = Thiago F. Dias
-	email = t.dias@mshimizu.com.br
+	email = thiago.fernandesdias235@gmail.com
 [pull]
     rebase = false
 [init]
@@ -12,4 +12,3 @@
 	allow = always
 [submodule]
 	recurse = true
-
