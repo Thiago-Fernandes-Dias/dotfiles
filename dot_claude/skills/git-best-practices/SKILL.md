@@ -25,9 +25,10 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`
 - **For complex changes**: add a body explaining **what** changed and **why**.
   - Wrap body lines at 72 characters.
   - Reference related issues (e.g. `Closes #42`, `Refs #99`).
-- **Atomic commits** — one logical change per commit. Never bundle unrelated work.
+- **Atomic commits** — prefer commits with few changes: one logical change per commit. Never bundle unrelated work.
   - Each commit must be self-explanatory when read in isolation.
-  - Split into multiple commits if addressing different concerns.
+  - Each commit message should be short and descriptive.
+  - **If the working tree has many changes**, do not cram them into one commit — make multiple commits, one per logical change, each with its own short, descriptive message.
 - **Body separated** from subject by a blank line.
 - **No WIP/merge commits on main** — squash or rebase before merging.
 
