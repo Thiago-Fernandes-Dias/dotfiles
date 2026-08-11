@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "<CONTEXT7_API_KEY"
+      }
+    },
+    "jira": {
+      "serverUrl": "https://mcp.atlassian.com/v1/mcp",
+      "headers": {
+        "Authorization": "Bearer <ATLASSIAN_API_TOKEN>"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
