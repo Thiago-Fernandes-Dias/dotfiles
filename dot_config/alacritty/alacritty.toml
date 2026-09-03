@@ -1,9 +1,9 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/xterm.toml"
+    "~/.config/alacritty/themes/github-dark.toml"
 ]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
