@@ -32,3 +32,5 @@ compinit
 
 # Oh My ZSH init
 . $ZSH/oh-my-zsh.sh
+
+xhost +local:docker > /dev/null
