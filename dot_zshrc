@@ -1,7 +1,12 @@
-export ZSH="$HOME/.oh-my-zsh"
-export EDITOR='code'
-export TERM=xterm-256color
 export GITHUB_USER="Thiago-Fernandes-Dias"
+
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR='code --wait'
+
+export TERM=xterm-256color
+export TERM=xterm-256color
+
+export ASDF_DATA_DIR="$HOME/.asdf"
 
 export OPENCODE_EXPERIMENTAL_LSP_TOOL=true
 export OPENCODE_ENABLE_EXA=1
@@ -12,16 +17,18 @@ plugins=(
     git zsh-syntax-highlighting zsh-autosuggestions asdf git chezmoi 
     fzf gh docker mvn node pip python debian)
 
-source $ZSH/oh-my-zsh.sh
-
 # PATH
 export PATH=$PATH:$HOME/.local/bin
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH=$PATH:$HOME/.opencode/bin/
 
+# ASDF completions
+fpath=(${ASDF_DATA_DIR}/completions $fpath)
+autoload -Uz compinit
+compinit
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Docker X11 forwarding
-xhost +local:docker > /dev/null
-
+# Oh My ZSH init
+. $ZSH/oh-my-zsh.sh
