@@ -1,0 +1,91 @@
+" --- Basic Vim Settings ---
+
+set ignorecase             " Ignore case in search patterns
+set smartcase              " Case-sensitive search if capital letters are present
+set hlsearch               " Highlight all search matches
+set incsearch              " Incremental search as you type
+set showmode               " Display current mode in status bar
+set number                 " Show absolute line numbers
+set relativenumber         " Show relative line numbers
+set scrolloff=5            " Keep 5 lines above/below cursor
+set clipboard+=unnamedplus " Share system clipboard
+
+" --- Back to Normal mode with 'kj' ---
+
+inoremap kj <Esc>
+
+" --- Native IDE Integration ---
+
+set ideajoin              " Use JetBrains smart line joining (preserves formatting)
+set idearefactormode=keep " Preserve Vim mode during refactoring operations
+
+" --- Leader Key Setup ---
+
+let mapleader = ' '     " Set Leader key to Space
+
+" --- IdeaVim Plugins ---
+
+set surround            " Delete/change/add parentheses, quotes, XML tags
+set multiple-cursors    " Support for multi-cursor editing
+set commentary          " Comment code using gcc / gc
+set argtextobj          " Text object for argument lists (cia, daa, etc.)
+set textobj-entire      " Text object for entire buffer (ae, ie)
+set ReplaceWithRegister " Replace with register via 'gr'
+
+" --- EasyMotion Configuration ---
+
+set easymotion
+
+" --- Custom Mappings ---
+
+nnoremap <leader><space> :nohlsearch<CR> " Clear search highlighting easily
+nnoremap <leader>w :w<CR> " Quick file saving
+
+" --- Window / Split Navigation ---
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" --- EasyMotion Shortcut Aliases ---
+
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+map <leader>s <Plug>(easymotion-s)
+map <leader>f <Plug>(easymotion-f)
+
+" --- JetBrains IDE Actions ---
+
+" Navigation & Search
+
+map <leader>ga <Action>(GotoAction)
+map <leader>gf <Action>(GotoFile)
+map <leader>gc <Action>(GotoClass)
+map <leader>gs <Action>(GotoSymbol)
+map <leader>ge <Action>(GotoNextError)
+
+" Code & Refactoring
+
+map <leader>rn <Action>(RenameElement)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>fm <Action>(ReformatCode)
+map <leader>o  <Action>(OptimizeImports)
+
+" Code Navigation
+
+map gd          <Action>(GotoDeclaration)
+map gi          <Action>(GotoImplementation)
+map <leader>u  <Action>(FindUsages)
+map <leader>bb  <Action>(ToggleLineBreakpoint)
+
+" Window & Layout Management
+
+map <leader>v   <Action>(SplitVertically)
+map <leader>h   <Action>(SplitHorizontally)
+map <leader>q   <Action>(CloseContent)
+map <leader>e   <Action>(ActivateProjectToolWindow)
+
+" Source Configuration
+
+map <leader>is :source ~/.ideavimrc<CR>
