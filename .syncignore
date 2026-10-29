@@ -1,4 +1,2 @@
 .config/nvim
-.zshrc
-.tmux.conf
 .alacritty.toml
